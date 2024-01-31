@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import profileImage from "../assets/panda.jpeg"
+import profileImage from "../assets/profile.png"
 import {
     command1,
     output1,
@@ -33,15 +33,28 @@ const Layout = () => {
     const [r3, setR3] = useState("")
     const [r4, setR4] = useState("")
 
-    const [showTerminal, setShowTerminal] = useState(false)
-    const [showIntro, setShowIntro] = useState(true)
+    const [showTerminal, setShowTerminal] = useState(true)
+    const [showIntro, setShowIntro] = useState(false)
 
 
     useEffect(() => {
 
         setTimeout(() => {
             setR1(root1)
-            setLine1(command1)
+
+            let i = 0;
+            let line = ""
+            const interval = setInterval(() => {
+                if (i >= command1.length) {
+                    clearInterval(interval)
+                    return;
+                }
+                console.log(command1[i]);
+
+                line = line + command1[i]
+                setLine1(line);
+                i++;
+            }, 50);
         }, 1000);
 
         setTimeout(() => {
@@ -50,12 +63,34 @@ const Layout = () => {
 
         setTimeout(() => {
             setR2(root1)
-            setLine3(command2)
+            let i = 0;
+            let line = ""
+            const interval = setInterval(() => {
+                if (i >= command2.length) {
+                    clearInterval(interval)
+                    return;
+                }
+                line = line + command2[i]
+                setLine3(line);
+                i++;
+            }, 50);
+
         }, 2500);
 
         setTimeout(() => {
             setR3(root2)
-            setLine4(command3)
+            let i = 0;
+            let line = ""
+            const interval = setInterval(() => {
+                if (i >= command3.length) {
+                    clearInterval(interval)
+                    return
+                }
+
+                line = line + command3[i]
+                setLine4(line);
+                i++;
+            }, 50);
         }, 3500);
 
         setTimeout(() => {
@@ -64,12 +99,23 @@ const Layout = () => {
 
         setTimeout(() => {
             setR4(root2)
-            setLine6(command4)
+            let i = 0;
+            let line = ""
+            const interval = setInterval(() => {
+                if (i >= command4.length) {
+                    clearInterval(interval)
+                    return
+                }
+
+                line = line + command4[i]
+                setLine6(line);
+                i++;
+            }, 50);
         }, 4500);
 
         setTimeout(() => {
-            setShowTerminal(true)
-            setShowIntro(false)
+            setShowTerminal(false)
+            setShowIntro(true)
         }, 5500);
 
 
@@ -82,19 +128,19 @@ const Layout = () => {
 
             <div className="flex flex-col items-center py-8">
                 <div className="w-fit shadow-glow">
-                    <img src={profileImage} height="150" width="150" />
+                    <img src={profileImage} height="200" width="200" />
                 </div>
 
-                <div className="w-[70%] flex justify-between mx-auto mt-[2vh] md:mt-[6vh] text-[#D6D6D6]">
-                    <a href="https://www.linkedin.com/in/sparsh-sethi-9334481b7/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin size={20} /></a>
-                    <a href="https://github.com/code-sparsh" target="_blank" rel="noopener noreferrer"><FaGithub size={20} /></a>
-                    <a href="https://leetcode.com/SparshSethi/" target="_blank" rel="noopener noreferrer"><TbBrandLeetcode size={20} /></a>
-                    <a href="https://twitter.com/SparshSethi2" target="_blank" rel="noopener noreferrer"><FaSquareXTwitter size={20} /></a>
+                <div className="w-[70%] flex justify-center gap-5 mx-auto md:mt-[6vh] text-[#D6D6D6]">
+                    <a href="https://www.linkedin.com/in/sparsh-sethi-9334481b7/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin size={30} /></a>
+                    <a href="https://github.com/code-sparsh" target="_blank" rel="noopener noreferrer"><FaGithub size={30} /></a>
+                    <a href="https://leetcode.com/SparshSethi/" target="_blank" rel="noopener noreferrer"><TbBrandLeetcode size={30} /></a>
+                    <a href="https://twitter.com/SparshSethi2" target="_blank" rel="noopener noreferrer"><FaSquareXTwitter size={30} /></a>
                     {/* <a href="https://medium.com/@sparshsethi" target="_blank" rel="noopener noreferrer"><FaMedium size={20} /></a> */}
                 </div>
             </div>
 
-    
+
 
             <div className=' w-full text-center text-6xl md:text-8xl font-cyberway text-green-600 whitespace-pre mb-4'>Sparsh  Sethi</div>
             <hr></hr>
