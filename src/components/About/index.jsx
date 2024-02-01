@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import profileImage from "../assets/profile.png"
+import profileImage from "../../assets/profile.png"
 import {
     command1,
     output1,
@@ -10,16 +10,16 @@ import {
     command4,
     root1,
     root2,
-} from './commands.tsx';
+} from './commands';
 
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaMedium } from "react-icons/fa6";
+// import { FaMedium } from "react-icons/fa6";
 import { TbBrandLeetcode } from "react-icons/tb";
 
 
-const Layout = () => {
+const About = () => {
 
 
     const [line1, setLine1] = useState("")
@@ -55,7 +55,7 @@ const Layout = () => {
                 setLine1(line);
                 i++;
             }, 50);
-        }, 1000);
+        }, 500);
 
         setTimeout(() => {
             setLine2(output1)
@@ -187,4 +187,4 @@ const Layout = () => {
         </div>
     )
 }
-export default Layout
+export default About
