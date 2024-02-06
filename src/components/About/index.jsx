@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import profileImage from "../../assets/profile.png"
+import profileImage from "../../assets/profile.jpeg"
 import {
     command1,
     output1,
@@ -126,12 +126,12 @@ const About = () => {
     return (
         <div className=" h-full border- border-green-600 md:w-1/2 ">
 
-            <div className="flex flex-col items-center py-8">
+            <div className="flex flex-col items-center gap-4 md:gap-6 py-8">
                 <div className="w-fit shadow-glow">
                     <img src={profileImage} height="200" width="200" />
                 </div>
 
-                <div className="w-[70%] flex justify-center gap-5 mx-auto md:mt-[6vh] text-[#D6D6D6]">
+                <div className="w-[70%] flex justify-center gap-5 mx-auto text-[#D6D6D6]">
                     <a href="https://www.linkedin.com/in/sparsh-sethi-9334481b7/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin size={30} /></a>
                     <a href="https://github.com/code-sparsh" target="_blank" rel="noopener noreferrer"><FaGithub size={30} /></a>
                     <a href="https://leetcode.com/SparshSethi/" target="_blank" rel="noopener noreferrer"><TbBrandLeetcode size={30} /></a>
@@ -177,10 +177,10 @@ const About = () => {
             </div> : null
             }
 
-            {showIntro ? <div className="mt-10 mx-5 border-yello-700 border-4 bg-yellow-100 rounded-2xl px-4 text-green-700 whitespace-pre-wrap h-fit text-center ">
-                <div className="w-full text-center text-amber-800 text-2xl ">intro.md</div>
+            {showIntro ? <div className="mt-6 md:mt-10 pb-4 md:pb-10 mx-5 border-4 bg-yellow-100 rounded-2xl px-4  whitespace-pre-wrap h-fit text-center ">
+                <div className="w-full text-center text-amber-800 text-2xl border-yellow-200 rounded-2xl">intro.md</div>
                 <hr></hr>
-                {intro}
+                <div className="text-xl mt-2 md:mt-4  text-green-700">{intro}</div>
             </div> : null
             }
 

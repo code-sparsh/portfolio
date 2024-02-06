@@ -8,17 +8,13 @@ export const command3: string = 'ls';
 export const output2: string = 'intro.md     resume.pdf    profile.jpg    projects.zip';
 
 export const command4: string = 'cat intro.md';
-export const intro: string = `
-Hello, I'm Sparsh. 
+export const intro: string = `Hi 👋,
 
-I am a highly motivated person looking forward to building products on-and-for the Internet! 
+🇮🇳 I am a Software Developer from India 
 
-You can find me working on a lot of new stuff.
+⚡ You can find me working on a lot of new stuff.
 
-I enjoy building web applications and exploring new technologies.
-
-Feel free to explore my portfolio and projects!
-
+👀 Feel free to explore my portfolio and projects!
 `;
 
 export const root1: string = "sparsh@linux-desktop:~$"
