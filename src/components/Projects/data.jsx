@@ -4,7 +4,7 @@ const imagePath = "/projects"
 const projects = [
 
     {
-        id: 1, 
+        id: 0, 
         title: 'CrossThatZero',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         image1: `${imagePath}/CrossThatZero-Phone.png`,
@@ -15,7 +15,7 @@ const projects = [
     },
 
     {
-        id: 2,
+        id: 1,
         title: 'BlogPoint',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         image1: `${imagePath}/BlogPoint-Phone.png`,
@@ -25,17 +25,17 @@ const projects = [
         link: 'https://blogpoint.netlify.app'
     },
 
-    // {
-    //     id: 3,
-    //     title: 'CrossThatZero',
-    //     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    //     image1: `${imagePath}/CrossThatZero-Phone.png`,
-    //     image2: `${imagePath}/CrossThatZero-Desktop.png`,
-    //     github1: 'https://github.com/code-sparsh/cross-that-zero_backend',
-    //     github2: 'https://github.com/code-sparsh/cross-that-zero_backend',
-    //     link: ''
-    // }
-
+    {
+        id: 2,
+        title: 'ApnaBazaar',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        image1: `${imagePath}/ApnaBazaar-Phone.png`,
+        image2: `${imagePath}/ApnaBazaar-Desktop.png`,
+        github1: 'https://github.com/code-sparsh/cross-that-zero_backend',
+        github2: 'https://github.com/code-sparsh/cross-that-zero_backend',
+        link: 'https://apnabazaar-in.netlify.app'
+    },
+    
     
 ]
 

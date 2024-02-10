@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import profileImage from "../../assets/profile.jpeg"
+import profileImage from "../../assets/profile.png"
 import {
     command1,
     output1,
@@ -17,6 +17,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 // import { FaMedium } from "react-icons/fa6";
 import { TbBrandLeetcode } from "react-icons/tb";
+
 
 
 const About = () => {
