@@ -5,6 +5,9 @@ import './App.css'
 import About from './components/About'
 import Projects from './components/Projects'
 import Sidebar from './components/Sidebar'
+import Education from './components/Education'
+import Contact from './components/Contact'
+import Blogs from './components/Blogs'
 
 
 function App() {
@@ -23,9 +26,9 @@ function App() {
       <Sidebar selectedCard = {selectedCard} setSelectedCard = {setSelectedCard}/>
       {selectedCard === "about" ? <About/> : null}
       {selectedCard === "projects" ? <Projects/> : null}
-      {/* {selectedCard === "education" ? <Education/> : null}
-      {selectedCard === "conctact" ? <Contact/> : null}
-      {selectedCard === "blogs" ? <Blogs/> : null} */}
+      {selectedCard === "education" ? <Education/> : null}
+      {selectedCard === "contact" ? <Contact/> : null}
+      {selectedCard === "blogs" ? <Blogs/> : null}
     </div>
 
    
