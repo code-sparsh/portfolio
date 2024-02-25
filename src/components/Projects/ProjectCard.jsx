@@ -31,7 +31,7 @@ const ProjectCard = ({ project }) => {
             {showDescription && (
                 <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-9">
                     <div className="text-white text-center">{project.description}</div>
-                </div>git commitsd --amend --no-edit
+                </div>
             )}
 
             
@@ -42,11 +42,11 @@ const ProjectCard = ({ project }) => {
             </div>
 
             <div className='absolute rounded-lg border rounded-t-none w-full flex bg-yellow-100 bg-zinc-600/ justify-between px-6 py-3  text-blue-700 text-black ' >
-                <a href={project.link} className="cursor-pointer flex justify-evenly"><img src={redirectLogo} height={24} width={24}></img></a>
+                <a href={project.link} target='_target' className="cursor-pointer flex justify-evenly"><img src={redirectLogo} height={24} width={24}></img></a>
                 <div>|</div>
-                <a href={project.github1} className="cursor-pointer flex gap-2"><img src={githubLogo} height={24} width={24}></img>(Link 1)</a>
+                <a href={project.github1} target='_target' className="cursor-pointer flex gap-2"><img src={githubLogo} height={24} width={24}></img>(Link 1)</a>
                 <div>|</div>
-                <a href={project.github2} className="cursor-pointer flex gap-2"><img src={githubLogo} height={24} width={24}></img>(Link 2)</a>
+                <a href={project.github2} target='_target' className="cursor-pointer flex gap-2"><img src={githubLogo} height={24} width={24}></img>(Link 2)</a>
             </div>
 
         </div>
