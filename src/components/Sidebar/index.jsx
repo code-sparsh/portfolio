@@ -27,10 +27,12 @@ const Sidebar = ({ selectedCard, setSelectedCard }) => {
             <div onClick={() => setSelectedCard("projects")} className={` ${selectedCard === "projects" ? " bg-slate-800" : ""}  w-full text-2xl  p-5 rounded-full  "`}>🛠️</div>
             {/* <div className="text-xl">|</div> */}
 
-            <div onClick={() => setSelectedCard("contact")} className={` ${selectedCard === "conctact" ? " bg-slate-800" : ""}  w-full text-2xl  p-5 rounded-full  "`}> 💬</div>
+            <div onClick={() => setSelectedCard("resume")} className={` ${selectedCard === "resume" ? " bg-slate-800" : ""} w-full text-2xl  p-5 rounded-full  "`}>📝</div>
+
+            <div onClick={() => setSelectedCard("contact")} className={` ${selectedCard === "contact" ? " bg-slate-800" : ""}  w-full text-2xl  p-5 rounded-full  "`}> 💬</div>
             {/* <div className="text-xl">|</div> */}
 
-            <div onClick={() => setSelectedCard("blogs")} className={` ${selectedCard === "blogs" ? " bg-slate-800" : ""} w-full text-2xl  p-5 rounded-full  "`}>✍🏻</div>
+            
         </div>)
 
 
@@ -45,10 +47,13 @@ const Sidebar = ({ selectedCard, setSelectedCard }) => {
             <div onClick={() => setSelectedCard("projects")} className={` ${selectedCard === "projects" ? " bg-slate-800" : ""} hover:bg-zinc-700 w-full text-2xl border px-10 py-6 rounded-2xl cursor-pointer "`}>🛠️ Projects</div>
             <div className="text-4xl">|</div>
 
-            <div onClick={() => setSelectedCard("contact")} className={` ${selectedCard === "conctact" ? " bg-slate-800" : ""} hover:bg-zinc-700 w-full text-2xl border px-10 py-6 rounded-2xl cursor-pointer "`}> 💬 Contact</div>
+            <div onClick={() => setSelectedCard("resume")} className={` ${selectedCard === "resume" ? " bg-slate-800" : ""}hover:bg-zinc-700 w-full text-2xl border px-10 py-6 rounded-2xl cursor-pointer "`}>📝 Resume</div>
             <div className="text-4xl">|</div>
 
-            <div onClick={() => setSelectedCard("blogs")} className={` ${selectedCard === "blogs" ? " bg-slate-800" : ""}hover:bg-zinc-700 w-full text-2xl border px-10 py-6 rounded-2xl cursor-pointer "`}>✍🏻 Blogs</div>
+            <div onClick={() => setSelectedCard("contact")} className={` ${selectedCard === "contact" ? " bg-slate-800" : ""} hover:bg-zinc-700 w-full text-2xl border px-10 py-6 rounded-2xl cursor-pointer "`}> 💬 Contact</div>
+            
+
+            
         </div>)
 }
 

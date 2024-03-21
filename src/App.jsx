@@ -7,7 +7,7 @@ import Projects from './components/Projects'
 import Sidebar from './components/Sidebar'
 import Education from './components/Education'
 import Contact from './components/Contact'
-import Blogs from './components/Blogs'
+import Resume from './components/Resume'
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
       {selectedCard === "projects" ? <Projects/> : null}
       {selectedCard === "education" ? <Education/> : null}
       {selectedCard === "contact" ? <Contact/> : null}
-      {selectedCard === "blogs" ? <Blogs/> : null}
+      {selectedCard === "resume" ? <Resume/> : null}
     </div>
 
    
