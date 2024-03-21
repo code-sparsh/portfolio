@@ -73,11 +73,10 @@ const Projects = () => {
     }
 
 
-
     return (
 
 
-        <div className=" h-full md:w-1/2 flex flex-col gap-x-24 gap-y-10">
+        <div className=" h-full md:w-1/2 flex flex-col gap-x-24 gap-y-8">
 
             <div className=' text-7xl text-center text-yellow-600'>Projects</div>
 
@@ -87,7 +86,7 @@ const Projects = () => {
             }
             )}</div>
 
-            <div className='grid md:grid-cols-2  gap-x-7 gap-y-16 w-full'>
+            <div className='grid md:grid-cols-2  gap-x-6 gap-y-16 w-full'>
                 {
                     (projectsOnCurrentPage.length > 0) && projectsOnCurrentPage.map((project) => {
                         return <ProjectCard key={project.id} project={project}></ProjectCard>
@@ -95,6 +94,8 @@ const Projects = () => {
 
                 }
             </div>
+
+
 
 
             

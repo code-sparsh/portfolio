@@ -10,12 +10,20 @@ const ProjectCard = ({ project }) => {
     const toggleDescription = () => {
         setShowDescription(!showDescription);
     };
+    
+    const handleMouseOver = () => {
+        setShowDescription(true);
+    }
+
+    const handleMouseOut = () => {
+        setShowDescription(false);
+    }
 
  
 
     return (
 
-        <div onClick={toggleDescription} className=" border border-gray-300 rounded-lg mx-6 md:mx-2  w-fit h-fit relative">
+        <div onClick={toggleDescription} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className=" border border-gray-300 rounded-lg mx-6 md:mx-2  w-fit h-fit relative">
 
 
             <div className="title text-center">
@@ -29,7 +37,7 @@ const ProjectCard = ({ project }) => {
             </div>
 
             {showDescription && (
-                <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-9">
+                <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center text-lg z-9">
                     <div className="text-white text-center">{project.description}</div>
                 </div>
             )}
@@ -46,7 +54,7 @@ const ProjectCard = ({ project }) => {
                 <div>|</div>
                 <a href={project.github1} target='_target' className="cursor-pointer flex gap-2"><img src={githubLogo} height={24} width={24}></img>(Link 1)</a>
                 <div>|</div>
-                <a href={project.github2} target='_target' className="cursor-pointer flex gap-2"><img src={githubLogo} height={24} width={24}></img>(Link 2)</a>
+                {project.github2  && <a href={project.github2} target='_target' className="cursor-pointer flex gap-2"><img src={githubLogo} height={24} width={24}></img>(Link 2)</a>}
             </div>
 
         </div>
