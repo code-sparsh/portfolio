@@ -12,9 +12,9 @@ const EducationCard = () => {
 
             <div className=' text-7xl text-center text-yellow-300 mb-10'>Education</div>
 
-            <div className=' flex flex-col gap-12 h-full items-center m-4'>
+            <div className=' flex flex-col gap-12 h-full items-center mx-6'>
                 
-                <div className='border border-stone-400 w-full md:w-1/2 h-auto p-3 rounded-2xl' >
+                <div className='border border-stone-400 w-full md:w-1/2 h-auto p-3 rounded-2xl shadow-2xl  shadow-black' >
                     <div className=' text-2xl  border w-fit p-1 mb-4'><b>Undergraduation</b> (pursuing)</div>
                     <div className=' flex justify-center  mb-2'><img src="/education/msit.png"></img></div>
                     <div className=' text-center text-yellow-200'>Maharaja Surajmal Institute of Technology</div>
@@ -25,7 +25,7 @@ const EducationCard = () => {
                 </div>
 
 
-                <div className='border border-stone-400 w-full md:w-1/2 h-auto p-3 rounded-2xl' >
+                <div className='border border-stone-400 w-full md:w-1/2 h-auto p-3 rounded-2xl bg-stone-00 shadow-2xl  shadow-black' >
                     <div className=' text-2xl font-bold border w-fit p-1 mb-4'>Senior Secondary</div>
                     <div className=' flex justify-center  mb-2'><img src="/education/sgnps.png"></img></div>
                     <div className=' text-center text-yellow-200'>Sri Guru Nanak Public School</div>

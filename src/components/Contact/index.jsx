@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className="h-full md:w-1/2  flex flex-col items-center justify-center p-8">
+    <div className="h-full overflow-clip md:w-1/2  flex flex-col items-center justify-center p-8">
       <div className="max-w-md w-full rounded-lg shadow-2xl p-8">
         <h2 className="text-4xl font-bold mb-6">Contact Me</h2>
         <p className="text-white mb-6">
@@ -52,8 +52,10 @@ const Contact = () => {
           </button>
         </form>
 
+        <hr className='mt-8'></hr>
+
         {/* Additional contact information */}
-        <div className="mt-8">
+        <div className="mt-4">
           <h3 className="text-xl font-bold mb-4">Contact Information</h3>
           <div className="flex items-center mb-4">
             <svg

@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard'
 import projects from './data'
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 
 const Projects = () => {
@@ -17,8 +18,8 @@ const Projects = () => {
         numberOfPages = 1;
         console.log("len: " + projects.length);
         if (projects.length > 0) {
-            if (projects.length > 4) {
-                numberOfPages = Math.ceil(projects.length / 4);
+            if (projects.length > 2) {
+                numberOfPages = Math.ceil(projects.length / 2);
 
                 console.log("yes");
             }
@@ -60,7 +61,7 @@ const Projects = () => {
 
         console.log("idhar kyu");
         console.log(pageNumber);
-        for (let i = (pageNumber - 1) * 4; i < projects.length && i < pageNumber * 4; i++) {
+        for (let i = (pageNumber - 1) * 2; i < projects.length && i < pageNumber * 2; i++) {
             setProjectsOnCurrentPage(prevProjects => [
                 ...prevProjects,
                 projects[i]
@@ -70,6 +71,18 @@ const Projects = () => {
 
         console.log("current: ")
         console.log(projectsOnCurrentPage);
+    }
+
+    const onNextPage = () => {
+        if(currentPage + 1 <= pageNumbers.length) {
+            setCurrentPage((page) => page + 1);
+        }
+    }
+
+    const onPreviousPage = () => {
+        if(currentPage - 1 > 0) {
+            setCurrentPage((page) => page - 1);
+        }
     }
 
 
@@ -86,7 +99,7 @@ const Projects = () => {
             }
             )}</div>
 
-            <div className='grid md:grid-cols-2  gap-x-6 gap-y-16 w-full'>
+            <div className='grid md:grid-cols-2  md:mt-32  gap-x-6 gap-y-16 w-full'>
                 {
                     (projectsOnCurrentPage.length > 0) && projectsOnCurrentPage.map((project) => {
                         return <ProjectCard key={project.id} project={project}></ProjectCard>
@@ -96,8 +109,19 @@ const Projects = () => {
             </div>
 
 
+            
+            <div className=' mt-20 pb-6  flex justify-center gap-x-10 w-full text-white'>
+            { (currentPage != 1) && <button onClick={onPreviousPage} className="flex items-center  bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-md transition-colors duration-300">
+                <FaArrowLeft className="mr-2" />
+                Previous Page
+            </button>}
 
-
+            { (currentPage < pageNumbers.length) && <button onClick={onNextPage} className="flex items-center  bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-md transition-colors duration-300">
+                Next Page
+                <FaArrowRight className="ml-2" />
+            </button>
+            }
+            </div>
             
             
 
@@ -108,7 +132,7 @@ const Projects = () => {
 
 const PageNumberComponent = ({ number,  currentPage, renderProjects, setCurrentPage }) => {
 
-    return <div onClick={() => {renderProjects(number); setCurrentPage(number); currentPage=number; console.log("updated........: " + number + " " + currentPage);}} className={`bg-blue-500 p-3 cursor-pointer ${currentPage === number ? 'p-3 bg-yellow-500' : ''}`}
+    return <div onClick={() => {renderProjects(number); setCurrentPage(number); currentPage=number; console.log("updated........: " + number + " " + currentPage);}} className={`bg-blue-500 p-3 cursor-pointer ${currentPage === number ? 'p-3 bg-yellow-500 border border-black' : ''}`}
     >{number}</div>
 }
 

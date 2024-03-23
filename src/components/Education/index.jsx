@@ -9,7 +9,7 @@ const Education = () => {
 
         <div className=" h-full md:w-1/2 flex flex-col">
 
-    <EducationCard/>
+        <EducationCard/>
 
             {/* <WorkInProgress/> */}
 
