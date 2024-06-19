@@ -89,7 +89,7 @@ const Projects = () => {
     return (
 
 
-        <div className=" h-full md:w-1/2 flex flex-col gap-x-24 gap-y-8">
+        <div className=" h-full lg:w-1/2 flex flex-col gap-x-24 gap-y-8">
 
             <div className=' text-7xl text-center text-yellow-600'>Projects</div>
 

@@ -7,7 +7,7 @@ const Education = () => {
 
     return (
 
-        <div className=" h-full md:w-1/2 flex flex-col">
+        <div className=" h-full lg:w-1/2 flex flex-col">
 
         <EducationCard/>
 

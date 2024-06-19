@@ -2,7 +2,7 @@ const Resume = () => {
 
     return (
 
-        <div className=" h-full md:w-1/2 flex flex-col justify-center  gap-10 mx-8 md:mx-0">
+        <div className=" h-full lg:w-1/2 flex flex-col justify-center  gap-10 mx-8 md:mx-0">
 
             <div className=" text-5xl text-yellow-200 text-center">Resume</div>
 

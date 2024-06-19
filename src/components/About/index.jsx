@@ -124,9 +124,9 @@ const About = () => {
 
 
     return (
-        <div className=" h-full border- border-green-600 md:w-1/2 ">
+        <div className=" h-full border- border-green-600 lg:w-1/2 ">
 
-            <div className="flex flex-col items-center gap-4 md:gap-6 py-8">
+            <div className="flex flex-col items-center gap-4 md:gap-6 py-6 md:py-0">
                 <div className="w-fit shadow-glow">
                     <img src={"/profile.png"} height="200" width="200" />
                 </div>

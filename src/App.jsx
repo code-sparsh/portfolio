@@ -20,10 +20,19 @@ function App() {
 
   const [selectedCard, setSelectedCard] = useState("about")
 
+  window.addEventListener("resize", () => {
+    var width = window.innerWidth
+    var height = window.innerHeight
+
+    console.log("Width: ", width)
+    console.log("Height: ", height)
+  })
+
   return (
 
-    <div className="app select-none h-full flex flex-col md:flex-row md:justify-center md:gap-24">
+    <div className="app select-none h-full flex flex-col lg:flex-row lg:justify-center lg:gap-24">
       <Sidebar selectedCard = {selectedCard} setSelectedCard = {setSelectedCard}/>
+      
       {selectedCard === "about" ? <About/> : null}
       {selectedCard === "projects" ? <Projects/> : null}
       {selectedCard === "education" ? <Education/> : null}
