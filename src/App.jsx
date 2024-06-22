@@ -12,21 +12,7 @@ import Resume from './components/Resume'
 
 function App() {
 
-  // const [isAboutSelected, setIsAboutSelected] = useState(true)
-  // const [isEducationSelected, setIsEducationSelected] = useState(true)
-  // const [isProjectsSelected, setIsProjectsSelected] = useState(true)
-  // const [isContactSelected, setIsContactSelected] = useState(true)
-  // const [isBlogsSelected, setIsBlogsSelected] = useState(true)
-
   const [selectedCard, setSelectedCard] = useState("about")
-
-  window.addEventListener("resize", () => {
-    var width = window.innerWidth
-    var height = window.innerHeight
-
-    console.log("Width: ", width)
-    console.log("Height: ", height)
-  })
 
   return (
 
@@ -39,9 +25,6 @@ function App() {
       {selectedCard === "contact" ? <Contact/> : null}
       {selectedCard === "resume" ? <Resume/> : null}
     </div>
-
-   
-
   )
 }
 

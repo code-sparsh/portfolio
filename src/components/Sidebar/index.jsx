@@ -18,6 +18,9 @@ const Sidebar = ({ selectedCard, setSelectedCard }) => {
         if (width > 1024) {
             setDeviceType("pc");
         }
+        else {
+            setDeviceType("smartphone");
+        }
     })
 
     const [deviceType, setDeviceType] = useState("smartphone")

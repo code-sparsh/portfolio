@@ -91,7 +91,7 @@ const Projects = () => {
 
         <div className=" h-full lg:w-1/2 flex flex-col gap-x-24 gap-y-8">
 
-            <div className=' text-7xl text-center text-yellow-600'>Projects</div>
+            <div className=' text-7xl text-center text-yellow-300 mt-10 mb-5'>Projects</div>
 
             <div className='flex justify-center gap-2'>{pageNumbers.length>0 && pageNumbers.map((i) => {
                 console.log("i: " + i +  " current: " + currentPage);
@@ -99,7 +99,7 @@ const Projects = () => {
             }
             )}</div>
 
-            <div className='grid md:grid-cols-2  md:mt-32  gap-x-6 gap-y-16 w-full'>
+            <div className='grid md:grid-cols-2  lg:mt-12  gap-x-6 gap-y-16 w-full'>
                 {
                     (projectsOnCurrentPage.length > 0) && projectsOnCurrentPage.map((project) => {
                         return <ProjectCard key={project.id} project={project}></ProjectCard>
@@ -111,7 +111,7 @@ const Projects = () => {
 
             
             <div className=' mt-20 pb-6  flex justify-center gap-x-10 w-full text-white'>
-            { (currentPage != 1) && <button onClick={onPreviousPage} className="flex items-center  bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-md transition-colors duration-300">
+            { (currentPage != 1) && <button onClick={onPreviousPage} className="flex items-center  bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-md transition-colors duration-300">
                 <FaArrowLeft className="mr-2" />
                 Previous Page
             </button>}
@@ -132,7 +132,7 @@ const Projects = () => {
 
 const PageNumberComponent = ({ number,  currentPage, renderProjects, setCurrentPage }) => {
 
-    return <div onClick={() => {renderProjects(number); setCurrentPage(number); currentPage=number; console.log("updated........: " + number + " " + currentPage);}} className={`bg-blue-500 p-3 cursor-pointer ${currentPage === number ? 'p-3 bg-yellow-500 border border-black' : ''}`}
+    return <div onClick={() => {renderProjects(number); setCurrentPage(number); currentPage=number; console.log("updated........: " + number + " " + currentPage);}} className={`bg-blue-500 p-3 cursor-pointer ${currentPage === number ? 'p-3 bg-green-500 border border-black' : ''}`}
     >{number}</div>
 }
 
