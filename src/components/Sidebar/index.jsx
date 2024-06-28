@@ -29,18 +29,18 @@ const Sidebar = ({ selectedCard, setSelectedCard }) => {
 
         (<div className="flex gap-2 bg-stone-900 rounded-full mx-3  ">
 
-            <div onClick={() => setSelectedCard("about")} className={` ${selectedCard === "about" ? " bg-slate-800" : ""}  w-full text-2xl  p-5 rounded-full  "`}> 💁🏻‍♂️</div>
+            <div onClick={() => setSelectedCard("about")} className={` ${selectedCard === "about" ? " bg-slate-800" : ""}  w-full text-2xl  text-center p-5 rounded-full  "`}> 💁🏻‍♂️</div>
             {/* <div className="text-xl">|</div> */}
 
-            <div onClick={() => setSelectedCard("education")} className={` ${selectedCard === "education" ? " bg-slate-800" : ""}  w-full text-2xl  p-5 rounded-full  "`}>🎓</div>
+            <div onClick={() => setSelectedCard("education")} className={` ${selectedCard === "education" ? " bg-slate-800" : ""}  w-full text-2xl text-center  p-5 rounded-full  "`}>🎓</div>
             {/* <div className="text-xl">|</div> */}
 
-            <div onClick={() => setSelectedCard("projects")} className={` ${selectedCard === "projects" ? " bg-slate-800" : ""}  w-full text-2xl  p-5 rounded-full  "`}>🛠️</div>
+            <div onClick={() => setSelectedCard("projects")} className={` ${selectedCard === "projects" ? " bg-slate-800" : ""}  w-full text-2xl  text-center p-5 rounded-full  "`}>🛠️</div>
             {/* <div className="text-xl">|</div> */}
 
-            <div onClick={() => setSelectedCard("resume")} className={` ${selectedCard === "resume" ? " bg-slate-800" : ""} w-full text-2xl  p-5 rounded-full  "`}>📝</div>
+            <div onClick={() => setSelectedCard("resume")} className={` ${selectedCard === "resume" ? " bg-slate-800" : ""} w-full text-2xl text-center p-5 rounded-full  "`}>📝</div>
 
-            <div onClick={() => setSelectedCard("contact")} className={` ${selectedCard === "contact" ? " bg-slate-800" : ""}  w-full text-2xl  p-5 rounded-full  "`}> 💬</div>
+            <div onClick={() => setSelectedCard("contact")} className={` ${selectedCard === "contact" ? " bg-slate-800" : ""}  w-full text-2xl text-center p-5 rounded-full  "`}> 💬</div>
             {/* <div className="text-xl">|</div> */}
 
             
