@@ -7,7 +7,7 @@ const Resume = () => {
             <div className=" text-5xl text-yellow-200 text-center">Resume</div>
 
             <iframe
-                src="https://drive.google.com/file/d/1fT8bM54nTL34pU5Bk-pXZlv4I9kAZLme/preview"
+                src={import.meta.env.VITE_RESUME_URL}
                 className="w-full h-4/5"
                 allow="autoplay"
             ></iframe>
