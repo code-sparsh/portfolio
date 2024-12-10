@@ -20,8 +20,6 @@ const Projects = () => {
         if (projects.length > 0) {
             if (projects.length > 2) {
                 numberOfPages = Math.ceil(projects.length / 2);
-
-                console.log("yes");
             }
             else {
                 numberOfPages = 1;
@@ -59,7 +57,6 @@ const Projects = () => {
 
         setProjectsOnCurrentPage([])
 
-        console.log("idhar kyu");
         console.log(pageNumber);
         for (let i = (pageNumber - 1) * 2; i < projects.length && i < pageNumber * 2; i++) {
             setProjectsOnCurrentPage(prevProjects => [
