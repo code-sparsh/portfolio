@@ -16,8 +16,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 // import { FaMedium } from "react-icons/fa6";
 import { TbBrandLeetcode } from "react-icons/tb";
-
-
+import abouts from "./data";
 
 const About = () => {
 
@@ -128,7 +127,7 @@ const About = () => {
 
             <div className="flex flex-col items-center gap-4 md:gap-6 py-6 md:py-0">
                 <div className="w-fit shadow-glow">
-                    <img className="rounded-full" src={"/profile.png"} height="200" width="200" />
+                    <img rel = "preload" className="rounded-full" src={abouts[0].image} height="200" width="200" />
                 </div>
 
                 <div className="w-[70%] flex justify-center gap-5 mx-auto text-[#D6D6D6]">
